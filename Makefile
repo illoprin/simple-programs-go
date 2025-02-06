@@ -1,6 +1,11 @@
 CC=go build
-TARGET=bin/app.exe
+TARGET=app.exe
 SRC_DIR=src
 
 rpn-calc:
-	$(CC) -o $(TARGET) $(SRC_DIR)/rpn-calculator/*
+	$(CC) -o $(TARGET) $(SRC_DIR)/rpn-calculator/*.go
+	$(TARGET)
+
+list:
+	$(CC) -o $(TARGET) $(SRC_DIR)/linked-list/*.go
+	$(TARGET)
