@@ -9,3 +9,7 @@ rpn-calc:
 list:
 	$(CC) -o $(TARGET) $(SRC_DIR)/linked-list/*.go
 	$(TARGET)
+
+img_gen:
+	$(CC) -o $(TARGET) $(SRC_DIR)/img_gen/*.go
+	$(TARGET)
