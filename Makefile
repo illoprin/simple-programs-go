@@ -13,3 +13,7 @@ list:
 img_gen:
 	$(CC) -o $(TARGET) $(SRC_DIR)/img_gen/*.go
 	$(TARGET)
+
+unsafe:
+	$(CC) -o $(TARGET) $(SRC_DIR)/unsafe_ptrs/*.go
+	$(TARGET)
