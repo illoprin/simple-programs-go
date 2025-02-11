@@ -64,6 +64,7 @@ func (this *Llist) PushFront(value interface{}) {
 	this.length++
 }
 
+// Push new value after node with index
 func (this *Llist) PushAfter(index uint64, value interface{}) {
 	// Process simple cases
 	if this.length == 0 && index > 0 {
@@ -71,7 +72,7 @@ func (this *Llist) PushAfter(index uint64, value interface{}) {
 	} else if index == 0 {
 		this.PushFront(value)
 		return
-	} else if index == this.length {
+	} else if index == this.length-1 {
 		this.PushBack(value)
 		return
 	} else if index > this.length {

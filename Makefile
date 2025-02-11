@@ -17,3 +17,7 @@ img_gen:
 unsafe:
 	$(CC) -o $(TARGET) $(SRC_DIR)/unsafe_ptrs/*.go
 	$(TARGET)
+
+binary-read-write:
+	$(CC) -o $(TARGET) $(SRC_DIR)/to-binary/*.go
+	$(TARGET)
