@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	var list *Llist = NewLlist()
+	var list *llist = NewLlist()
 	var items1 []int = []int{2, 3, 4, 5, 3, 10, 23, 222, 10}
 	var items2 []int = []int{34, 32, 45}
 	var items3 []int = []int{84, 82, 81}

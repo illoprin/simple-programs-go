@@ -21,3 +21,11 @@ unsafe:
 binary-read-write:
 	$(CC) -o $(TARGET) $(SRC_DIR)/to-binary/*.go
 	$(TARGET)
+
+parallel:
+	$(CC) -o $(TARGET) $(SRC_DIR)/parallel/*.go
+	$(TARGET)
+
+parallel-simple:
+	$(CC) -o $(TARGET) $(SRC_DIR)/parallel-simple/*.go
+	$(TARGET)

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type Llist struct {
+type llist struct {
 	length uint64
 	begin  *llist_node
 	end    *llist_node
@@ -14,24 +14,24 @@ type llist_node struct {
 }
 
 // === Getters
-func (this *Llist) Len() uint64 {
+func (this *llist) Len() uint64 {
 	return this.length
 }
-func (this *Llist) Begin() *llist_node {
+func (this *llist) Begin() *llist_node {
 	return this.begin
 }
-func (this *Llist) End() *llist_node {
+func (this *llist) End() *llist_node {
 	return this.end
 }
 
-func NewLlist() *Llist {
-	return &Llist{
+func NewLlist() *llist {
+	return &llist{
 		0, nil, nil,
 	}
 }
 
 // Push new element at the end of list
-func (this *Llist) PushBack(value interface{}) {
+func (this *llist) PushBack(value interface{}) {
 	new_node := llist_node{
 		value: value, next: nil,
 	}
@@ -48,7 +48,7 @@ func (this *Llist) PushBack(value interface{}) {
 }
 
 // Push new element at the begin of list
-func (this *Llist) PushFront(value interface{}) {
+func (this *llist) PushFront(value interface{}) {
 	new_node := llist_node{
 		value: value, next: nil,
 	}
@@ -65,7 +65,7 @@ func (this *Llist) PushFront(value interface{}) {
 }
 
 // Push new value after node with index
-func (this *Llist) PushAfter(index uint64, value interface{}) {
+func (this *llist) PushAfter(index uint64, value interface{}) {
 	// Process simple cases
 	if this.length == 0 && index > 0 {
 		return
@@ -98,7 +98,7 @@ func (this *Llist) PushAfter(index uint64, value interface{}) {
 }
 
 // Delete last element in list and return this value
-func (this *Llist) PopBack() interface{} {
+func (this *llist) PopBack() interface{} {
 	if this.length == 0 {
 		return nil
 	}
@@ -128,7 +128,7 @@ func (this *Llist) PopBack() interface{} {
 	return value_to_delete
 }
 
-func (this *Llist) PopFront() interface{} {
+func (this *llist) PopFront() interface{} {
 	if this.length == 0 {
 		return nil
 	}
@@ -146,7 +146,7 @@ func (this *Llist) PopFront() interface{} {
 	return value_to_delete
 }
 
-func (this *Llist) Print() {
+func (this *llist) Print() {
 	node := this.begin
 	fmt.Print("{ ")
 	for node != nil {
