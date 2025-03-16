@@ -1,5 +1,5 @@
 CC=go build
-TARGET=app.exe
+TARGET=app
 SRC_DIR=src
 
 rpn-calc:
