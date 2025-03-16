@@ -1,31 +1,27 @@
-CC=go build
+CC=go run
 TARGET=app
 SRC_DIR=src
 
 rpn-calc:
-	$(CC) -o $(TARGET) $(SRC_DIR)/rpn-calculator/*.go
+	$(CC) $(SRC_DIR)/rpn-calculator/*.go
 	$(TARGET)
 
 list:
-	$(CC) -o $(TARGET) $(SRC_DIR)/linked-list/*.go
+	$(CC) $(SRC_DIR)/linked-list/*.go
 	$(TARGET)
 
 img_gen:
-	$(CC) -o $(TARGET) $(SRC_DIR)/img_gen/*.go
+	$(CC) $(SRC_DIR)/img_gen/*.go
 	$(TARGET)
 
 unsafe:
-	$(CC) -o $(TARGET) $(SRC_DIR)/unsafe_ptrs/*.go
+	$(CC) $(SRC_DIR)/unsafe_ptrs/*.go
 	$(TARGET)
 
 binary-read-write:
-	$(CC) -o $(TARGET) $(SRC_DIR)/to-binary/*.go
+	$(CC) $(SRC_DIR)/to-binary/*.go
 	$(TARGET)
 
-parallel:
-	$(CC) -o $(TARGET) $(SRC_DIR)/parallel/*.go
-	$(TARGET)
-
-parallel-simple:
-	$(CC) -o $(TARGET) $(SRC_DIR)/parallel-simple/*.go
+get-collision-sha256:
+	$(CC) $(SRC_DIR)/get-collision-sha256/*.go
 	$(TARGET)
